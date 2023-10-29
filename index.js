@@ -1,4 +1,13 @@
 const element = document.createElement("div");
+
+const mainElement = document.querySelector('main#main');
+mainElement.parentNode.removeChild(mainElement);
+
+const newHeader = document.createElement('h1');
+newHeader.textContent = 'victory';
+newHeader.setAttribute('id', 'victory');
+newHeader.textContent = 'YOUR-NAME is the champion';
+
 document.body.append(element);
 
 const ul = document.createElement("ul");
@@ -10,7 +19,6 @@ for (let i = 0; i < 3; i++) {
 
   element.append(ul);
 
-const mainElement = document.querySelector('#main');
 const parentElement = mainElement.parentNode;
 
 parentElement.removeChild("#main");
